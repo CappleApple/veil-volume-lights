@@ -39,8 +39,6 @@ Requires Java 21.
 ./gradlew.bat runClient
 ```
 
-The release artifact is `build/libs/veilvolumelights-1.0.jar`.
-
 Veil Volume Lights is available under the MIT License.
 
 The reference integration is [Veil Lights for TaCZ](https://github.com/CappleApple/veil-lights-for-tacz).
