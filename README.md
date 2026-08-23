@@ -1,6 +1,6 @@
 # Veil Volume Lights
 
-A reusable NeoForge 1.21.1 client rendering library for Veil point, spot, and rectangular area lights with continuous transparent-medium volumes.
+A client rendering library for Veil point, spot, and rectangular area lights with continuous transparent-medium volumes.
 
 The public API is under `com.cappleapple.veilvolumelights.api.client`. Create a persistent `VolumeLightHandle` with `VeilVolumeLights.create(...)`, update it when the source changes, and free it when the source disappears.
 
