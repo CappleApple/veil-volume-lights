@@ -1,0 +1,7 @@
+{
+  "width": "q.screen_width",
+  "height": "q.screen_height",
+  "depth": false,
+  "autoClear": false,
+  "format": "RGB16F"
+}

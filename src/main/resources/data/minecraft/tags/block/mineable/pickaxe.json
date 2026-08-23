@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "veilvolumelights:test_point_light",
+    "veilvolumelights:test_spot_light",
+    "veilvolumelights:test_area_light"
+  ]
+}

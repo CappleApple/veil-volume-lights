@@ -1,0 +1,5 @@
+{
+  "depth": { "type": "RENDER_BUFFER", "format": "DEPTH32F_STENCIL8" },
+  "autoClear": false,
+  "format": "RGB16F"
+}

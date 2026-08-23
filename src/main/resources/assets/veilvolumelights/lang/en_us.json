@@ -1,0 +1,5 @@
+{
+  "block.veilvolumelights.test_point_light": "Test Point Light",
+  "block.veilvolumelights.test_spot_light": "Test Spot Light",
+  "block.veilvolumelights.test_area_light": "Test Area Light"
+}

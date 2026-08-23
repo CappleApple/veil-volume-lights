@@ -1,0 +1,9 @@
+{
+  "stages": [{
+    "type": "veil:blit",
+    "shader": "veilvolumelights:transparent_medium",
+    "in": "minecraft:main",
+    "out": "veilvolumelights:transparent_medium",
+    "clear": true
+  }]
+}

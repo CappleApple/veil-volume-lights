@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:block",
+  "pools": [{
+    "bonus_rolls": 0.0,
+    "conditions": [{ "condition": "minecraft:survives_explosion" }],
+    "entries": [{ "type": "minecraft:item", "name": "veilvolumelights:test_spot_light" }],
+    "rolls": 1.0
+  }],
+  "random_sequence": "veilvolumelights:blocks/test_spot_light"
+}

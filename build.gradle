@@ -1,0 +1,99 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.74'
+}
+
+version = library_mod_version
+group = library_mod_group_id
+
+base {
+    archivesName = library_mod_id
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.blamejared.com' }
+}
+
+neoForge {
+    version = neoforge_version
+
+    parchment {
+        minecraftVersion = '1.21.1'
+        mappingsVersion = '2024.11.17'
+    }
+
+    if (project == rootProject) {
+        runs {
+            client {
+                client()
+                gameDirectory = file('run')
+            }
+            server {
+                server()
+                gameDirectory = file('run-server')
+                programArgument '--nogui'
+            }
+        }
+    }
+
+    mods {
+        "${library_mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+dependencies {
+    implementation "foundry.veil:veil-neoforge-${minecraft_version}:${veil_version}"
+
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+tasks.named('processResources', ProcessResources).configure {
+    def properties = [
+        minecraft_version: minecraft_version,
+        neoforge_version: neoforge_version,
+        mod_id: library_mod_id,
+        mod_name: library_mod_name,
+        mod_version: library_mod_version,
+        mod_authors: mod_authors,
+        mod_license: mod_license,
+        mod_description: library_mod_description,
+        veil_version: veil_version
+    ]
+    inputs.properties properties
+    filesMatching(['META-INF/neoforge.mods.toml', 'pack.mcmeta']) {
+        expand properties
+    }
+}
+
+tasks.named('test', Test).configure {
+    useJUnitPlatform()
+}
+
+sourceSets.test.compileClasspath += sourceSets.main.compileClasspath
+sourceSets.test.runtimeClasspath += sourceSets.main.runtimeClasspath
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    includeEmptyDirs = false
+    manifest {
+        attributes([
+            'Specification-Title': library_mod_id,
+            'Specification-Vendor': mod_authors,
+            'Specification-Version': '1',
+            'Implementation-Title': project.name,
+            'Implementation-Version': project.jar.archiveVersion,
+            'Implementation-Vendor': mod_authors
+        ])
+    }
+}

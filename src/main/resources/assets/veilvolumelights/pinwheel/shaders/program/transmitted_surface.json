@@ -1,0 +1,12 @@
+{
+  "vertex": "veil:blit_screen",
+  "fragment": "veilvolumelights:transmitted_surface",
+  "textures": {
+    "AlbedoSampler": "veil:dynamic_buffer/albedo",
+    "NormalSampler": "veil:dynamic_buffer/normal",
+    "OpaqueDepthSampler": {
+      "type": "framebuffer",
+      "name": "veilvolumelights:opaque_depth:depth"
+    }
+  }
+}

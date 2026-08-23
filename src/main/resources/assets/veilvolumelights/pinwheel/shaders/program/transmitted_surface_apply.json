@@ -1,0 +1,10 @@
+{
+  "vertex": "veil:blit_screen",
+  "fragment": "veilvolumelights:transmitted_surface_apply",
+  "textures": {
+    "TransmittedSurfaceSampler": {
+      "type": "framebuffer",
+      "name": "veilvolumelights:transmitted_surface"
+    }
+  }
+}
