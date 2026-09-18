@@ -84,4 +84,4 @@ The built jar is written to `build/libs/`.
 
 ## License
 
-Veil Volume Lights is available under the MIT License.
+Veil Volume Lights is licensed under [CC BY-NC-SA 4.0 with a Modpack/Server Exception](LICENSE). Modpacks and Minecraft servers, including monetized ones, may use it under the additional permission in the LICENSE.
