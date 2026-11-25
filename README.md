@@ -64,6 +64,7 @@ That project is also a useful reference for managing a persistent handle whose p
 - NeoForge
 - Veil
 - Java 21
+- Shader storage buffers (`GL_ARB_shader_storage_buffer_object`), memory qualifiers (`GL_ARB_shader_image_load_store`), and explicit binding layouts (`GL_ARB_shading_language_420pack`) for transparent-medium lighting
 
 This is a client-side library.
 

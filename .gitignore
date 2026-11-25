@@ -6,3 +6,4 @@ logs/
 .idea/
 *.iml
 out/
+/docs/CURRENT_STATE.md

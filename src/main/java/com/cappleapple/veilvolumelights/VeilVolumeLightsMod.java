@@ -16,7 +16,7 @@ public final class VeilVolumeLightsMod {
     public VeilVolumeLightsMod(IEventBus modBus) {
         ModContent.register(modBus);
         if (FMLEnvironment.dist == Dist.CLIENT) {
-            com.cappleapple.veilvolumelights.client.ClientBootstrap.initialize();
+            com.cappleapple.veilvolumelights.client.ClientBootstrap.initialize(modBus);
         }
     }
 }

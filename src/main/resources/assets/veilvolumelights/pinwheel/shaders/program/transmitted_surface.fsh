@@ -1,4 +1,6 @@
 #extension GL_ARB_shader_storage_buffer_object : require
+#extension GL_ARB_shader_image_load_store : require
+#extension GL_ARB_shading_language_420pack : require
 
 #include veil:common
 #include veil:space_helper
